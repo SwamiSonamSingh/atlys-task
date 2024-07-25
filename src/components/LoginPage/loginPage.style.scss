@@ -1,0 +1,107 @@
+.login-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 49px;
+    &__wrapper {
+        padding: 23px 24px;
+        border-radius: 8px;
+        border: 2px solid transparent;
+        border-image-slice: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+        background: linear-gradient(rgba(39, 41, 45, 1), rgba(39, 41, 45, 1))
+                padding-box,
+            linear-gradient(to right, #969696, #343434) border-box;
+        &__heading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            &__title {
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 16.94px;
+                letter-spacing: 0.03em;
+                color: rgba(107, 108, 112, 1);
+            }
+            &__subTitle {
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 21.78px;
+                color: rgba(255, 255, 255, 1);
+            }
+        }
+        &__form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: flex-start;
+            &__fields {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                &__labels {
+                    display: flex;
+                    align-items: center;
+                    color: rgba(197, 199, 202, 1);
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 16.94px;
+                    justify-content: space-between;
+                }
+                &__input {
+                    width: 415px;
+                    display: flex;
+                    align-items: center;
+                    border: 1.5px solid rgba(53, 55, 59, 1);
+                    border-radius: 4px;
+                    svg {
+                        padding-right: 10.5px;
+                    }
+                    &--password,
+                    &--email {
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 19.36px;
+                        width: 100%;
+                        padding: 10.5px;
+                        background-color: rgba(39, 41, 45, 1);
+                        border: unset;
+                        color: #7f8084;
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+            }
+            &__actions {
+                width: 100%;
+                &--login {
+                    cursor: pointer;
+                    width: 100%;
+                    background-color: #4a96ff;
+                    border-radius: 4px;
+                    border: unset;
+                    padding: 12px 0px;
+                    color: #ffffff;
+                }
+            }
+            &__footer {
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 16.94px;
+                &__title {
+                    color: #7f8084;
+                }
+                &__subTitle {
+                    cursor: pointer;
+                    color: rgba(197, 199, 202, 1);
+                }
+            }
+        }
+    }
+}

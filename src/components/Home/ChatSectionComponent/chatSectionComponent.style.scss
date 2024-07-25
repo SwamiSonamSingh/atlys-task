@@ -1,0 +1,110 @@
+.chat-section {
+    background-color: #27292d;
+    border: 2px solid #35373b;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px 20px;
+    width: 700px;
+    cursor: pointer;
+    &__createPostTitle {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 21.78px;
+        color: #c5c7ca;
+    }
+    &__profileInfo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__left {
+            display: flex;
+            gap: 16px;
+            &__image {
+                height: 44px;
+                width: 44px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+            &__activeInfo {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                &__userName {
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 19.36px;
+                    color: #c5c7ca;
+                }
+                &__lastActive {
+                    display: flex;
+                    align-items: center;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 16.94px;
+                    color: #7f8084;
+                    gap: 5px;
+                    &__edit {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                        &__indicator {
+                            height: 5px;
+                            width: 5px;
+                            border-radius: 50%;
+                            background-color: #7f8084;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__messageSection {
+        display: flex;
+        background-color: #191920;
+        border-radius: 8px;
+        padding: 16px;
+        gap: 16px;
+        align-items: center;
+        &__emoji {
+            height: 100%;
+            padding: 13.5px 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #27292d;
+            border-radius: 50%;
+        }
+        &__text {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            color: #7f8084;
+        }
+    }
+    &__commentSection {
+        display: flex;
+        gap: 8px;
+        &__value {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 16.94px;
+            color: #7f8084;
+        }
+    }
+    &__actions {
+        display: flex;
+        justify-content: flex-end;
+        &--post {
+            border: unset;
+            padding: 14px 40px;
+            background-color: #4a96ff;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 19.36px;
+            color: #ffffff;
+        }
+    }
+}

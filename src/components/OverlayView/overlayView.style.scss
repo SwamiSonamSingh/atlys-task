@@ -1,0 +1,146 @@
+.overlay-view {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 49px;
+    position: fixed;
+    backdrop-filter: blur(2px);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1040;
+    &__wrapper {
+        padding: 23px 24px;
+        border-radius: 8px;
+        border: 2px solid transparent;
+        display: flex;
+        flex-direction: column;
+        animation: overlayAnimateOpen 0.4s ease-in;
+        background: linear-gradient(rgba(39, 41, 45, 1), rgba(39, 41, 45, 1))
+                padding-box,
+            linear-gradient(to right, #969696, #343434) border-box;
+        &__action {
+            display: flex;
+            justify-content: flex-end;
+            &__close {
+                cursor: pointer;
+                height: 32px;
+                width: 32px;
+                background-color: #131319;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        &__heading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            padding-bottom: 45px;
+            &__title {
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 16.94px;
+                letter-spacing: 0.03em;
+                color: rgba(107, 108, 112, 1);
+            }
+            &__subTitle {
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 21.78px;
+                color: rgba(255, 255, 255, 1);
+            }
+        }
+        &__form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: flex-start;
+            &__fields {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                &__labels {
+                    display: flex;
+                    align-items: center;
+                    color: rgba(197, 199, 202, 1);
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 16.94px;
+                    justify-content: space-between;
+                }
+                &__input {
+                    width: 415px;
+                    display: flex;
+                    align-items: center;
+                    border: 1.5px solid rgba(53, 55, 59, 1);
+                    border-radius: 4px;
+                    svg {
+                        padding-right: 10.5px;
+                    }
+                    &--password,
+                    &--email,
+                    &--userName {
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 19.36px;
+                        width: 100%;
+                        padding: 10.5px;
+                        background-color: rgba(39, 41, 45, 1);
+                        border: unset;
+                        color: #7f8084;
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+            }
+            &__actions {
+                width: 100%;
+                &--login,
+                &--continue {
+                    cursor: pointer;
+                    width: 100%;
+                    background-color: #4a96ff;
+                    border-radius: 4px;
+                    border: unset;
+                    padding: 12px 0px;
+                    color: #ffffff;
+                }
+            }
+            &__footer {
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 16.94px;
+                &__title {
+                    color: #7f8084;
+                }
+                &__subTitle {
+                    cursor: pointer;
+                    color: rgba(197, 199, 202, 1);
+                }
+            }
+        }
+    }
+}
+@keyframes blurBackground {
+    from {
+        backdrop-filter: blur(0px);
+    }
+    to {
+        backdrop-filter: backdrop-filter;
+    }
+}
+@keyframes overlayAnimateOpen {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
